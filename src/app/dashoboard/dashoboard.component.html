@@ -1,2 +1,8 @@
-<p>dashoboard works!</p>
-<input (value)="lev" />
+<div>
+    <p>dashoboard works!</p>
+    <div *ngFor="let item of data;let i=index;">
+        <div class="leftdiv">{{item}}</div><button (click)="deleteItem(i)">{{i}}</button>
+    </div>
+
+    <input [(ngModel)]="elem" /><button (click)="saveItem()">Save</button>
+</div>
