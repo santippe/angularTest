@@ -24,6 +24,7 @@ export class DashoboardComponent {
   saveItem() {
     this.dbService.insertData(this.elem)
     this.data = this.dbService.readData()
+    this.elem = null
   }
 
   deleteItem(index : number){
