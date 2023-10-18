@@ -10,25 +10,4 @@ import { DBServiceService } from '../DBService/dbservice.service';
 })
 export class DashoboardComponent {
 
-  lev: number
-  dbService: DBServiceService
-  data: any[]
-  elem : any = null
-
-  constructor(dbservice: DBServiceService) {
-    this.lev = DemoServiceService.lev
-    this.dbService = dbservice
-    this.data = dbservice.readData()
-  }
-
-  saveItem() {
-    this.dbService.insertData(this.elem)
-    this.data = this.dbService.readData()
-    this.elem = null
-  }
-
-  deleteItem(index : number){
-    this.dbService.deleteData(index)
-    this.data = this.dbService.readData()
-  }
 }
